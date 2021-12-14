@@ -50,7 +50,7 @@ if [[ ! -d $FQDIR ]]; then
   echo "ERROR: First argument must be a directory!" >&2
   usage 1
 fi
-if [[ ! -r $FASTA || $FASTA =~ (.fa|.fasta)$ ]]; then
+if [[ ! -r $FASTA || ! $FASTA =~ (.fa|.fasta)$ ]]; then
   echo "ERROR: Second argument must be a FASTA file!">&2
   usage 1
 fi
